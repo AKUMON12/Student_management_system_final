@@ -1,0 +1,650 @@
+/* General Body Styles */
+body.index-page {
+    font-family: 'Vazirmatn';
+    font-weight: 100, 300, 400, 500, 600, 700;
+    margin: 20px;
+    background: url('logo_student_system/background_index.gif') center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Vazirmatn';
+    font-weight: 100, 300, 400, 500, 600, 700;
+    margin: 20px;
+    background: url('logo_student_system/background_dash.gif') center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+/* Container for Login Form and Image Section */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background-color: #EDEFE2;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.container-dashboard {
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100vh;
+    margin-top: 50px;
+}
+
+
+
+
+/* index.php page */
+
+/* Form Section */
+.form-section {
+    flex: 1;
+    padding: 0px 20px 0px;
+    text-align: center;
+    color: #1d4e5f;
+}
+
+.form-section h1 {
+    color: #1d4e5f;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-inline: 50px;
+    line-height: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.form-section p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+form.add-student-form{
+    display: grid;
+}
+
+form label {
+    font-size: 1rem;
+    color: #1d4e5f;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #0C5B60;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: transparent;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+box-shadow: 0 0 0 1px #0C5B60;
+outline: none;
+}
+
+form .remember-me {
+    display: flow;
+    margin: 10px 0;
+}
+
+form .remember-me label {
+    margin: 0;
+    font-size: 1rem;
+}
+
+form button {
+
+    padding: 12px;
+    background-color: #0C5B60;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #163a46;
+}
+
+.form-section .copyright {
+    margin-top: 50px;
+    font-size: .8rem;
+    color: #BABABA;
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-align: left;
+}
+
+/* Image Section */
+.image-section {
+    flex: 1;
+    background-color: #29D299;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 70%;
+    height: auto;
+}
+
+.image-section .cropped-gif {
+    clip-path: inset(0% 20% 0% 20%); /* top, right, bottom, left offsets */
+    transform: scale(2.0); /* Adjust the size of the GIF */
+}
+
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+
+
+/* admin.php page */
+/* Header Section */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 50px;
+}
+
+.nav-bar h1 {
+    font-size: 2rem;
+    color: #1d4e5f;
+    margin-bottom: 10px;
+    font-weight: 900;
+    text-align: center;
+    margin-inline: 0px;
+    margin-top: auto;
+}
+
+.burger-menu {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1A1011;
+}
+
+.burger-menu:hover {
+    color: #0C5B60;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: absolute;
+    right: 70px;
+    top: 80px;
+}
+
+/* The dropdown content (logout link) */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Position it below the burger menu */
+    right: 0; /* Align it to the right */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px 0;
+}
+
+/* Styling for the logout link */
+.logout-link {
+    display: block;
+    padding: 10px;
+    color: #EDEFE2;
+    text-decoration: none;
+    background-color: #0C5B60;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+}
+
+/* Show the dropdown content when clicking the burger menu */
+.dropdown.show .dropdown-content {
+    display: contents;
+}
+
+/* Optional: Styling for the burger menu (hamburger icon) */
+.burger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #1d4e5f;
+}
+
+.burger-menu:focus + .dropdown {
+    display: block;
+}
+
+
+
+
+
+
+/* Action Section (Flex container) */
+.action-section {
+    display: flex;
+    justify-content: space-between; /* Aligns items to the left and right */
+    align-items: center; /* Vertically centers the items */
+    margin: 20px 50px; /* Center the section on the page */
+}
+
+/* Add Student Button */
+.add-student-btn {
+    padding: 10px 20px;
+    background-color: #19949B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-student-btn:hover {
+    background-color: #163a46;
+}
+
+/* Search Bar */
+.search-bar {
+    width: 300px;
+    padding: 10px;
+    padding-left: 35px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: #7EC3C7;
+}
+
+.search-bar::placeholder {
+    color: #19949B;
+    opacity: 0.7;
+}
+
+.search-bar:focus {
+    box-shadow: 0 0 0 2px #19949B;
+    outline: none;
+}
+
+.search-bar::before {
+  content: '\f002'; /* Font Awesome search icon */
+  font-family: FontAwesome;
+  position: absolute;
+  left: 5px;
+  top: 8px;
+}
+
+.search-container .fa {
+    position: absolute;
+    margin: 10px;
+    color: #19949B;
+}
+
+
+
+
+
+
+
+
+
+
+/* Table Container Styling */
+.table-container {
+    overflow-x: auto; /* Horizontal scrollbar */
+    overflow-y: auto; /* Vertical scrollbar */
+    max-height: 600px; /* Limit the table height to 500px (you can adjust this value) */
+    margin-top: 20px;
+}
+
+.table-container h2 {
+    font-size: 1.5rem;
+    color: #1d4e5f;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-align: left;
+    margin: 20px 50px 0px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Removes white lines between rows and columns */
+    border-spacing: 2px;
+    background-color: #B6E1E0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0 auto;
+    font-size: 1rem;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #024F5B;
+}
+
+thead th {
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    font-size: 14px;
+    padding: 10px 10px;
+}
+
+/* Customizing the scrollbar */
+tbody::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+tbody::-webkit-scrollbar-track {
+    background: #F2F2F2; /* Track color (the area where the scrollbar slides) */
+    border-radius: 10px;
+}
+
+tbody::-webkit-scrollbar-thumb {
+    background-color: #1d4e5f; /* Scrollbar color (matches table header) */
+    border-radius: 10px;
+    border: 2px solid #B6E1E0; /* Adds a subtle border around the scrollbar */
+}
+
+tbody::-webkit-scrollbar-thumb:hover {
+    background-color: #29D299; /* Lighter color on hover (matching the edit button) */
+}
+
+/* Table Rows */
+tbody tr {
+    background-color: #B6E1E0;
+    transition: background-color 0.3s;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #B6E1E0;
+}
+
+tbody tr:hover {
+    background-color: #89BCC0;
+}
+
+td {
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Updated Actions Column */
+td.actions-td {
+    /* Modified for better spacing and alignment */
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px; /* Space between items */
+    width: 600px;
+}
+
+/* Inputs Inside Table Cells */
+td input[type="text"],
+td input[type="email"] {
+    width: calc(23% - 10px); /* Make inputs fit in a row with gap */
+    padding: 8px;
+    border: 1px solid #C4C4C4;
+    border-radius: 15px;
+    font-size: 15px;
+    background: #FEBA82;
+    margin-bottom: 0; /* Remove extra margin for inline layout */
+}
+
+td input[type="text"]:focus,
+td input[type="email"]:focus {
+    outline: none;
+    border: 1px solid #0C5B60;
+    background-color: #feba82a2;
+}
+
+/* Updated Actions Buttons Styling */
+.edit-btn,
+.delete-btn {
+    /* Keep buttons inline with inputs */
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-grow: 1; /* Ensure buttons take equal space when room is available */
+}
+
+.edit-btn {
+    background-color: #2A73D9;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #215B9A;
+}
+
+.delete-btn {
+    background-color: #F44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #D32F2F;
+}
+
+/* Ensures consistent layout for the action buttons and inputs */
+.actions-td form {
+    /* display: inline-block; /* Align forms inline to prevent breaking the layout */
+    margin: 0; /* Remove default margin for inline layout */
+}
+
+
+
+/* Popup Form */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.popup-content {
+    background-color: #B6E1E0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #1d4e5f;
+    text-align: center;
+}
+
+.popup-content form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+    color: #1d4e5f;
+}
+
+.popup-content form input {
+    padding: 10px;
+    border: 2px solid #FEBA82;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.popup-content form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.popup-content form button[type="submit"] {
+    background-color: #29D299;
+    color: white;
+}
+
+.popup-content form button[type="button"] {
+    background-color: #F44336;
+    color: white;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px auto;
+    max-width: 80%;
+    display: none;
+}
+
+.alert-green {
+    background-color: #29D299;
+    color: white;
+}
+
+.alert-red {
+    background-color: #F44336;
+    color: white;
+}
+
+
+
+/* Error Message Styling */
+.error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #005236; /* Background color */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Padding around the footer */
+    position: absolute; /* Keep footer at the bottom of the page */
+    width: 100%; /* Full width */
+    bottom: -70px; /* Stick it to the bottom of the page /--- / Hide initially /  */
+    font-size: 1rem; /* Font size */
+}
+.footer p {
+    margin: 0; /* Remove default margin */
+    font-weight: 500; /* Slightly bold font */
+}
+
+
+
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Fixes and Enhancements for the "Public Page" */
+
+/* Center align the table on the page */
+body.public-page {
+    font-family: 'Vazirmatn';
+    font-weight: 100, 300, 400, 500, 600, 700;
+    margin: 20px 0px;
+    background: url('logo_student_system/background_dash.gif') center center / cover no-repeat;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+h1.public {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 40px;
+    padding: 15px;
+    color: #333333;
+}
+
+.public-page table {
+    border-collapse: collapse;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}   
